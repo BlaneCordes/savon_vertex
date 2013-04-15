@@ -2,6 +2,7 @@ require "httpi"
 
 module Savon
   class HTTPRequest
+  HTTPI.adapter = :curb
 
     def initialize(globals, http_request = nil)
       @globals = globals
